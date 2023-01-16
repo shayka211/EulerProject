@@ -2,6 +2,7 @@
 import numpy as np
 from copy import deepcopy
 import time
+import typing
 
 
 start = time.time()
@@ -16,7 +17,7 @@ n = 10**12
 # 4) number of past or present squares that are not used on any trip
 init = (2*m,0,0,0)  # initial state
 
-def binom(n,k):
+def binom(n:int,k:int):
     """Compute the binomial coefficient"""
     res = 1
     for j in range(n-k+1,n+1):
